@@ -1,0 +1,25 @@
+[
+    
+
+	{
+	"type": 1,
+      "title": "JFA-GO",
+      "name": "JFA-GO",
+      "description": "JFA-GO is a user management app for Jellyfin and Emby that provides invite-based account creation as well as other features that make one's instance much easier to manage.",
+      "note": "",
+      "logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/jfa-go.png",
+      "image": "hrfee/jfa-go",
+      "categories": ["Management","Tools"],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+	"network_mode": "bridge",
+      "ports": [ {"8056": "8056:8056/tcp"} ],
+      "volumes": [ {"bind": "!data/jfa-go/config", "container": "/config"},
+                   {"bind": "!data/jellyfin/config", "container": "/jf"},
+                   {"bind": "!localtime", "container": "/etc/localtime"} ],
+	"env": [ {"name": "PUID", "label": "PUID", "default": "!PUID"},
+        	   {"name": "PGID", "label": "PGID", "default": "!PGID"} ]	
+	}
+
+
+]
