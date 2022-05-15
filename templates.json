@@ -14,7 +14,7 @@
       "platform": "linux",
       "restart_policy": "unless-stopped",
 	"network_mode": "bridge",
-      "ports": [ {"8056": "8056:8056/tcp"} ],
+      "ports": [ {"8056:8056/tcp"} ],
       "volumes": [ {"bind": "!data/jfa-go/config", "container": "/config"},
                    {"bind": "!data/jellyfin/config", "container": "/jf"},
                    {"bind": "!localtime", "container": "/etc/localtime"} ],
