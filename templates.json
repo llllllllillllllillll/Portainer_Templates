@@ -1,7 +1,4 @@
-[
-    
-
-	{
+{
 	"type": 1,
       "title": "JFA-GO",
       "name": "JFA-GO",
@@ -20,6 +17,3 @@
 	"env": [ {"name": "PUID", "label": "PUID", "default": "!PUID"},
         	   {"name": "PGID", "label": "PGID", "default": "!PGID"} ]	
 	}
-
-
-]
