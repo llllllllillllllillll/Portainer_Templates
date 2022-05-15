@@ -33,7 +33,7 @@
 "description": "Nextcloud is a suite of client-server software for creating and using file hosting services.",
 "platform": "linux",
 "restart_policy": "unless-stopped",
-"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/nextcloud.png",
+"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/netdata.png",
 "image": "nextcloud",
 "categories": ["CMS","Tools"],
 "network_mode": "bridge",
