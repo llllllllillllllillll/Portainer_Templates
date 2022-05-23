@@ -38,11 +38,7 @@
 "categories": ["CMS","Tools"],
 "network_mode": "bridge",
 "ports": ["8080:80/tcp"],
-"volumes": [{"bind": "/home/docker.data/nextcloud", "container": "/var/www/html"},
-		{"bind": "/home/docker.data/nextcloud/apps", "container": "/var/www/html/custom_apps"},
-		{"bind": "/home/docker.data/nextcloud/config", "container": "/var/www/html/config"},
-		{"bind": "/home/docker.data/nextcloud/data", "container": "/var/www/html/data"},
-		{"bind": "/home/docker.data/nextcloud/themes", "container": "/var/www/html/themes"}],
+"volumes": [{"bind": "/home/docker.data/nextcloud", "container": "/var/www/html"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
 		{"name": "PGID", "label": "PGID", "default": "1000"}]
 
