@@ -237,7 +237,7 @@
 "description": "Dashy helps you organize your self-hosted services by making them accessible from a single place.",
 "note": "",
 "logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/dashy.png",
-"image": "lissy93/dashy",
+"image": "lissy93/dashy:latest",
 "categories": ["Other","Dashboard"],
 "platform": "linux",
 "restart_policy": "unless-stopped",
