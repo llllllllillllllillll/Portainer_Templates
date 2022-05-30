@@ -242,11 +242,7 @@
 "platform": "linux",
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
-"ports": ["4000:80/tcp"],
-"volumes": [{"bind": "/home/docker.data/dashy/my-local-conf.yml", "container": "/app/public/conf.yml"}],
-"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
-        {"name": "PGID", "label": "PGID", "default": "1000"}]
-
+"ports": ["4000:80/tcp"]
 }
 
 
