@@ -40,7 +40,7 @@
 	"ports": ["8080:80/tcp"],
 	"volumes": [{"bind": "/home/docker.data/nextcloud", "container": "/var/www/html"}],
 	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
-		  {"name": "PGID", "label": "PGID", "default": "1000"}]
+		    {"name": "PGID", "label": "PGID", "default": "1000"}]
 	
 	},
 {
@@ -104,10 +104,10 @@
 "network": "AppBridge",
 "ports": ["8081:8081/tcp"],
 "volumes": [{"bind": "/home/docker.data/qbittorrent", "container": "/config"},
-	      {"bind": "/media", "container": "/downloads"}],
+	        {"bind": "/media", "container": "/downloads"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"},
-	  {"name": "WEBUI_PORT", "label": "WEBUI_PORT", "default": "8081"}]
+	    {"name": "WEBUI_PORT", "label": "WEBUI_PORT", "default": "8081"}]
 
 },
 {
@@ -124,7 +124,7 @@
 "network": "AppBridge",
 "ports": ["7878:7878/tcp"],
 "volumes": [{"bind": "/home/docker.data/radarr", "container": "/config"},
-		{"bind": "/media", "container": "/downloads"}],
+		    {"bind": "/media", "container": "/downloads"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
@@ -143,8 +143,8 @@
 "network": "AppBridge",
 "ports": ["8989:8989/tcp"],
 "volumes": [{"bind": "/home/docker.data/sonarr", "container": "/config"},
-		{"bind": "/dev/rtc", "container": "/dev/rtc"},
-		{"bind": "/media", "container": "/downloads"}],
+			{"bind": "/dev/rtc", "container": "/dev/rtc"},
+			{"bind": "/media", "container": "/downloads"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
@@ -164,7 +164,7 @@
 "volumes": [{"bind": "/home/docker.data/mongo", "container": "/data/db"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"},
-	  {"name": "MONGO_INITDB_ROOT_USERNAME", "label": "MONGO_INITDB_ROOT_USERNAME", "default": "root"} ,
+	    {"name": "MONGO_INITDB_ROOT_USERNAME", "label": "MONGO_INITDB_ROOT_USERNAME", "default": "root"} ,
         {"name": "MONGO_INITDB_ROOT_PASSWORD", "label": "MONGO_INITDB_ROOT_PASSWORD", "default": "givemeapassword"}]
 
 },
@@ -182,9 +182,9 @@
 "network": "AppBridge",
 "ports": ["8096:8096/tcp"],
 "volumes": [{"bind": "/home/docker.data/jellyfin/config", "container": "/config"},
-		{"bind": "/home/docker.data/jellyfin/cache", "container": "/cache"},
-		{"bind": "/media", "container": "/media"},
-		{"bind": "/tmp/transcodes", "container": "/config/transcodes"}],
+			{"bind": "/home/docker.data/jellyfin/cache", "container": "/cache"},
+			{"bind": "/media", "container": "/media"},
+			{"bind": "/tmp/transcodes", "container": "/config/transcodes"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
@@ -202,10 +202,10 @@
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
 "ports": ["8096:8096/tcp"],
-"volumes": [{"bind": "/home/docker.data/jellyfin/config", "container": "/config",
-			 "bind": "/home/docker.data/jellyfin/cache", "container": "/cache",
-			 "bind": "/media", "container": "/media",
-			 "bind": "/tmp/transcodes", "container": "/config/transcodes"}],
+"volumes": [{"bind": "/home/docker.data/jellyfin/config", "container": "/config"},
+			{"bind": "/home/docker.data/jellyfin/cache", "container": "/cache"},
+			{"bind": "/media", "container": "/media"},
+			{"bind": "/tmp/transcodes", "container": "/config/transcodes"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
@@ -223,9 +223,9 @@
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
 "ports": ["8888:8888/tcp"],
-"volumes": [{"bind": "/home/docker.data/unmanic", "container": "/config",
-			 "bind": "/media", "container": "/library",
-			 "bind": "/tmp/unmanic", "container": "/tmp/unmanic"}],
+"volumes": [{"bind": "/home/docker.data/unmanic", "container": "/config"},
+			{"bind": "/media", "container": "/library"},
+			{"bind": "/tmp/unmanic", "container": "/tmp/unmanic"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
