@@ -243,6 +243,24 @@
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
 "ports": ["4000:80/tcp"]
+},
+{
+"type": 1,
+"title": "Uptime Kuma",
+"name": "Uptime_Kuma",
+"description": "Uptime monitoring application",
+"note": "",
+"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/uptime-kuma.png",
+"image": "louislam/uptime-kuma:1",
+"categories": ["Monitoring","Tools"],
+"platform": "linux",
+"restart_policy": "always",
+"network": "AppBridge",
+"ports": ["3001:3001/tcp"],
+"volumes": [{"bind": "/home/docker.data/uptime-kuma", "container": "/app/data"}],
+"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
+        {"name": "PGID", "label": "PGID", "default": "1000"}]
+
 }
 
 
