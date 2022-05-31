@@ -40,7 +40,7 @@
 	"ports": ["8080:80/tcp"],
 	"volumes": [{"bind": "/home/docker.data/nextcloud", "container": "/var/www/html"}],
 	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
-			{"name": "PGID", "label": "PGID", "default": "1000"}]
+		  {"name": "PGID", "label": "PGID", "default": "1000"}]
 	
 	},
 {
@@ -103,8 +103,8 @@
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
 "ports": ["8081:8081/tcp"],
-"volumes": [{"bind": "/home/docker.data/qbittorrent", "container": "/config",
-	       "bind": "/media", "container": "/downloads"}],
+"volumes": [{"bind": "/home/docker.data/qbittorrent", "container": "/config"},
+	      {"bind": "/media", "container": "/downloads"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"},
 	  {"name": "WEBUI_PORT", "label": "WEBUI_PORT", "default": "8081"}]
@@ -123,8 +123,8 @@
 "restart_policy": "unless-stopped",
 "network": "AppBridge",
 "ports": ["7878:7878/tcp"],
-"volumes": [{"bind": "/home/docker.data/radarr", "container": "/config",
-		 "bind": "/media", "container": "/downloads"}],
+"volumes": [{"bind": "/home/docker.data/radarr", "container": "/config"},
+		{"bind": "/media", "container": "/downloads"}],
 "env": [{"name": "PUID", "label": "PUID", "default": "1000"},
         {"name": "PGID", "label": "PGID", "default": "1000"}]
 
