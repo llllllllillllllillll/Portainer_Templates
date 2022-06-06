@@ -277,7 +277,12 @@
 	"ports": ["8082:8080/tcp"],
 	"volumes": [{"bind": "/home/docker.data/drupal", "container": "/bitnami/drupal"}],
 	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
-			{"name": "PGID", "label": "PGID", "default": "1000"}]
+			{"name": "PGID", "label": "PGID", "default": "1000"},
+			{"name": "DRUPAL_DATABASE_HOST", "label": "DRUPAL_DATABASE_HOST", "default": ""},
+			{"name": "DRUPAL_DATABASE_PORT", "label": "DRUPAL_DATABASE_PORT", "default": ""},
+			{"name": "DRUPAL_DATABASE_PASSWORD", "label": "DRUPAL_DATABASE_PASSWORD", "default": ""},
+			{"name": "DRUPAL_DATABASE_NAME", "label": "DRUPAL_DATABASE_NAME", "default": ""},
+			{"name": "DRUPAL_DATABASE_USER", "label": "DRUPAL_DATABASE_USER", "default": ""} ]
 	
 	}
 	
