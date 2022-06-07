@@ -276,6 +276,24 @@
 	"network": "AppBridge",
 	"ports": ["8082:80/tcp"]
 	
+	},
+	{
+	"type": 1,
+	"title": "Wordpress",
+	"name": "Wordpress",
+	"description": "WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL, which runs on a web hosting service.",
+	"note": "",
+	"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/wordpress.png",
+	"image": "wordpress",
+	"categories": ["CMS","Tools"],
+	"platform": "linux",
+	"restart_policy": "unless-stopped",
+	"network": "AppBridge",
+	"ports": ["8083:80/tcp"],
+	"volumes": [{"bind": "/home/docker.data/wordpress", "container": "/var/www/html"}],
+	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
+			{"name": "PGID", "label": "PGID", "default": "1000"}]
+	
 	}
 	
 	
