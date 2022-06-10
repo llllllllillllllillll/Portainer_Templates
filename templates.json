@@ -92,6 +92,28 @@
 	},
 	{
 	"type": 1,
+	"title": "MySQL",
+	"name": "MySQL",
+	"description": "An Enhanced drop in replacement for MySQL.",
+	"note": "",
+	"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/mariadb.png",
+	"image": "mysql",
+	"categories": ["Databases","Tools"],
+	"platform": "linux",
+	"restart_policy": "always",
+	"network": "AppBridge",
+	"ports": ["3306:3306/tcp"],
+	"volumes": [{"bind": "/home/docker.data/mysql", "container": "/var/lib/mysql"} ],
+	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
+			{"name": "PGID", "label": "PGID", "default": "1000"},
+			{"name": "MYSQL_ROOT_PASSWORD", "label": "MYSQL_ROOT_PASSWORD", "default": ""},
+			{"name": "MYSQL_PASSWORD", "label": "MYSQL_PASSWORD", "default": ""},
+			{"name": "MYSQL_DATABASE", "label": "MYSQL_DATABASE", "default": ""},
+			{"name": "MYSQL_USER", "label": "MYSQL_USER", "default": ""} ]
+	
+	},
+	{
+	"type": 1,
 	"title": "qBittorrent",
 	"name": "qBittorrent",
 	"description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
