@@ -293,6 +293,24 @@
 			{"name": "LOG_LEVEL", "label": "LOG_LEVEL", "default": "debug"},
 			{"name": "TZ", "label": "TZ", "default": "America/Los_Angeles"}]
 	
+	},
+	{
+	"type": 1,
+	"title": "Vaultwarden",
+	"name": "Vaultwarden",
+	"description": "Alternative implementation of the Bitwarden server API written in Rust",
+	"note": "",
+	"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/bitwarden.png",
+	"image": "vaultwarden/server:latest",
+	"categories": ["Downloads","Tools"],
+	"platform": "linux",
+	"restart_policy": "unless-stopped",
+	"network": "AppBridge",
+	"ports": ["8084:80/tcp"],
+	"volumes": [{"bind": "/home/docker/vaultwarden", "container": "/data"}],
+	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
+		{"name": "PGID", "label": "PGID", "default": "1000"}]
+	
 	}
 	
 	
