@@ -311,6 +311,26 @@
 	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
 		{"name": "PGID", "label": "PGID", "default": "1000"}]
 	
+	},
+	{
+	"type": 1,
+	"title": "Wekan",
+	"name": "Wekan",
+	"description": "Open-Source kanban",
+	"note": "",
+	"logo": "https://raw.githubusercontent.com/llllllllillllllillll/Portainer_Templates/main/images/wekan.png",
+	"image": "wekanteam/wekan:v6.28",
+	"categories": ["Downloads","Tools"],
+	"platform": "linux",
+	"restart_policy": "unless-stopped",
+	"network": "AppBridge",
+	"ports": ["2000:8080/tcp"],
+	"env": [{"name": "PUID", "label": "PUID", "default": "1000"},
+		{"name": "PGID", "label": "PGID", "default": "1000"},
+	        {"name": "WITH_API", "label": "WITH_API", "default": "true"},
+	       	{"name": "MONGO_URL", "label": "MONGO_URL", "default": ""},
+	       	{"name": "ROOT_URL", "label": "ROOT_URL", "default": "http://localhost:2000"}]
+	
 	}
 	
 	
